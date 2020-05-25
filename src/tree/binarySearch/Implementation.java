@@ -8,7 +8,7 @@ public class Implementation {
 
         Integer number;
 
-        for (int i = 0; i < 1000000; i++){
+        for (int i = 0; i < 5; i++){
             number = new Random().nextInt(333);
             System.out.println("The value on position ["+i+"] it's " + number);
             tree.insertNode(number);
@@ -25,5 +25,9 @@ public class Implementation {
         System.out.println("\n \n");
         System.out.println("Show tree in posOrder");
         tree.posOrder();
+
+        System.out.println("\n \n");
+        System.out.println("Count");
+        tree.count();
     }
 }

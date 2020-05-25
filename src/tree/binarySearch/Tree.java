@@ -3,6 +3,7 @@ package tree.binarySearch;
 public class Tree<T extends Comparable<T>> {
 
     private Node<T> root;
+    private int c = 0;
 
     public Tree() {
         root = null;
@@ -55,4 +56,20 @@ public class Tree<T extends Comparable<T>> {
         posOrderHelp(node.right);
         System.out.printf("%s ", node.data);
     }
+
+    public void count() {
+        System.out.println(String.valueOf(counterHelp(root)));
+    }
+
+    private int counterHelp(Node<T> node) {
+        if (node != null) {
+            if (node.left == null && node.right == null) {
+                c++;
+            }
+            this.counterHelp(node.left);
+            this.counterHelp(node.right);
+        }
+        return c;
+    }
+
 }

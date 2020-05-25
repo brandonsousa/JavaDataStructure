@@ -141,5 +141,4 @@ public class Tree {
         System.out.println("Matricula -> " + this.node.getStudent().getRegistration() +
                 " Nome -> " + this.node.getStudent().getName());
     }
-
 }
