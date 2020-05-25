@@ -2,7 +2,6 @@ package collections.hashmap;
 
 import collections.classes.Student;
 
-
 import java.util.Scanner;
 
 public class StudentCRUD {

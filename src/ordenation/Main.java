@@ -1,12 +1,7 @@
 package ordenation;
 
-import ordenation.booble.Booble;
-import ordenation.insertion.Insertion;
-import ordenation.selectionSort.SelectionSort;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Main {
 

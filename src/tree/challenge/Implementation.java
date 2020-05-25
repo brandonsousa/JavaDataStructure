@@ -33,7 +33,7 @@ public class Implementation {
         tree.posOrder();
 
         System.out.println("Diga a matricula do aluno ao qual deseja saber o nome");
-        tree.findByRegistration(in.nextInt());
+        System.out.println(tree.findByRegistration(in.nextInt()));
 
     }
 }

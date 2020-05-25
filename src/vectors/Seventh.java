@@ -1,7 +1,7 @@
 package vectors;
 
-import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Seventh {
 	public static void main(String[] args) {

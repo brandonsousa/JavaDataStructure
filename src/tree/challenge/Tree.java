@@ -32,17 +32,23 @@ public class Tree {
         }
     }
 
-    public void findByRegistration(int registration) {
-        if (this.node.getStudent().getRegistration() == registration) {
-            System.out.println(this.node.getStudent().getName());
+    public Student findByRegistration(int registration) {
+        if (this.node == null) {
+            return null;
         } else {
-            if (this.node.getStudent().getRegistration() < registration) {
-                if (this.left == null) {
-                    this.left.findByRegistration(registration);
-                }
+            if (registration == this.node.getStudent().getRegistration()) {
+                return this.node.getStudent();
             } else {
-                if (this.right == null) {
-                    this.right.findByRegistration(registration);
+                if (registration > this.node.getStudent().getRegistration()) {
+                    if (this.right == null) {
+                        return null;
+                    }
+                    return this.right.findByRegistration(registration);
+                } else {
+                    if (this.left == null) {
+                        return null;
+                    }
+                    return this.left.findByRegistration(registration);
                 }
             }
         }
