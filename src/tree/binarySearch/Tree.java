@@ -61,6 +61,10 @@ public class Tree<T extends Comparable<T>> {
         System.out.println(String.valueOf(counterHelp(root)));
     }
 
+    public void countNodes() {
+        System.out.println(countNodesHelpe(root));
+    }
+
     private int counterHelp(Node<T> node) {
         if (node != null) {
             if (node.left == null && node.right == null) {
@@ -68,6 +72,19 @@ public class Tree<T extends Comparable<T>> {
             }
             this.counterHelp(node.left);
             this.counterHelp(node.right);
+        }
+        return c;
+    }
+
+    private int countNodesHelpe(Node<T> node) {
+        if (node != null) {
+            if (node.left != null){
+                if (node.right != null){
+                    c++;
+                }
+            }
+            this.countNodesHelpe(node.left);
+            this.countNodesHelpe(node.right);
         }
         return c;
     }

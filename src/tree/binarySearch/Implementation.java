@@ -9,7 +9,7 @@ public class Implementation {
         Integer number;
 
         for (int i = 0; i < 5; i++){
-            number = new Random().nextInt(333);
+            number = new Random().nextInt(3);
             System.out.println("The value on position ["+i+"] it's " + number);
             tree.insertNode(number);
         }
@@ -27,7 +27,12 @@ public class Implementation {
         tree.posOrder();
 
         System.out.println("\n \n");
-        System.out.println("Count");
+        System.out.println("Sheets");
         tree.count();
+
+        System.out.println("\n \n");
+        System.out.println("Nodes");
+        tree.countNodes();
+
     }
 }
