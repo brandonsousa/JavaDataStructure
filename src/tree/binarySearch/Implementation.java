@@ -8,8 +8,8 @@ public class Implementation {
 
         Integer number;
 
-        for (int i = 0; i < 5; i++){
-            number = new Random().nextInt(3);
+        for (int i = 0; i < 20; i++){
+            number = new Random().nextInt(300);
             System.out.println("The value on position ["+i+"] it's " + number);
             tree.insertNode(number);
         }
@@ -33,6 +33,14 @@ public class Implementation {
         System.out.println("\n \n");
         System.out.println("Nodes");
         tree.countNodes();
+
+        System.out.println("\n \n");
+        System.out.println("Value on nodes");
+        tree.countValueNodes();
+
+        System.out.println("\n \n");
+        System.out.println("Tree");
+        System.out.println(tree);
 
     }
 }

@@ -78,13 +78,27 @@ public class Tree<T extends Comparable<T>> {
 
     private int countNodesHelp(Node<T> node) {
         if (node != null) {
-            if (node.left != null){
-                if (node.right != null){
+            if (node.left != null) {
+                if (node.right != null) {
                     c++;
                 }
             }
             this.countNodesHelp(node.left);
             this.countNodesHelp(node.right);
+        }
+        return c;
+    }
+
+    public void countValueNodes() {
+        System.out.println(countValueNodesHelp(root));
+    }
+
+    private int countValueNodesHelp(Node<T> node) {
+        if (node != null){
+            Object o = node.data;
+            c += (Integer) o;
+            countValueNodesHelp(node.left);
+            countValueNodesHelp(node.right);
         }
         return c;
     }
